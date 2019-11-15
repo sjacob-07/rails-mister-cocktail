@@ -1,0 +1,12 @@
+<h1>Doses#new</h1>
+<p>Find me in app/views/doses/new.html.erb</p>
+
+<h1 class="m-3">Add a New Dose</h1>
+
+<div class="m-3">
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.association :ingredient, as: :radio_buttons %>
+  <%= f.submit "Add a Dose", class: "btn btn-success" %>
+<% end %>
+</div>
